@@ -1,0 +1,1489 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #0f73bc;
+  --white: #fff;
+  --black: #000;
+  --back-grund: #f1f1f1;
+}
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 10px;
+}
+.main-headresult {
+  background: #fff;
+  box-shadow: 0 0 15px #ccc;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  top: 0;
+}
+.result-head {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.result-head ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.nmbr {
+  margin-left: 20px;
+  background: var(--background);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.nmbr a {
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.nmbr img {
+  width: 50px;
+}
+.add-reslt img {
+  width: 100%;
+}
+.price-stop {
+  background: #fff;
+  box-shadow: 0 10px 30px 0 #375ef633;
+  padding: 15px;
+  border: 1px solid rgba(13, 21, 75, 0.15);
+  position: sticky;
+  top: 105px !important;
+}
+.add-reslt {
+  position: sticky;
+  top: 105px;
+  box-shadow: 0 10px 30px 0 #375ef633;
+}
+.price-stop h3 {
+  font-size: 18px;
+  font-family: 'Josefin Sans';
+  margin-bottom: 10px;
+}
+.price-stop ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+.price-stop ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  font-family: 'Josefin Sans';
+  font-size: 15px;
+}
+.price-stop .form-check {
+  padding: 0;
+}
+.price-stop .form-check label {
+  margin: 0;
+}
+.price-stop .form-check input {
+  margin-right: 8px;
+}
+.price-stop .widget_plane_time {
+  border-bottom: 1px dashed #000;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+}
+.flight-list-box {
+  background: #fff;
+  box-shadow: 0 10px 30px 0 rgba(55, 94, 246, 0.2);
+  padding: 24px 15px;
+  border: 1px solid rgba(13, 21, 75, 0.15);
+  position: relative;
+}
+.flight-list-box .pricing h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.flight-list-box .pricing p {
+  font-size: 12px;
+  margin: 0 0 0;
+  color: #666363;
+  font-family: 'Roboto';
+}
+.flight-list-box .flight-time .left span:nth-child(1),
+.flight-list-box .flight-time .right span:nth-child(1) {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Josefin Sans';
+}
+.flight-list-box .flight-time .left span:nth-child(2),
+.flight-list-box .flight-time .right span:nth-child(2) {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #666363;
+  font-family: 'Josefin Sans';
+}
+.flight-list-box .flight-detils .tm-dt {
+  font-size: 14px;
+  color: #666363;
+  font-family: 'Josefin Sans';
+  text-align: center;
+  font-weight: 600;
+}
+.flight-list-box .flight-detils span:nth-child(2) {
+  font-size: 13px;
+  color: var(--background);
+  font-family: 'Roboto';
+}
+.flight-list-box .trip span:nth-child(1) {
+  font-family: 'Josefin Sans';
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--background);
+}
+.flight-list-box .trip span:nth-child(2) {
+  font-size: 12px;
+  color: #333;
+  font-family: 'Roboto';
+}
+.flight-list-box .book-now .rt-btn {
+  font-size: 14px;
+  font-family: 'Josefin Sans';
+}
+.flight-list-box .middle {
+  margin: 0 15px;
+}
+.flight-list-box .dropdown {
+  position: unset !important;
+}
+.mainfltdetail {
+  display: none;
+  margin-top: -55px;
+}
+
+.round-bk.double-rund {
+  padding: 25px 15px;
+}
+.one-wy .dropdown-menu {
+  width: 100%;
+  padding: 15px;
+  top: 83px !important;
+  border-top: unset;
+  border-radius: 0;
+  padding-top: 0;
+  transform: unset !important;
+}
+.one-wy.round-trip .dropdown-menu {
+  width: 824px;
+  padding: 15px;
+  top: 174px !important;
+  border-top: unset;
+  border-radius: 0;
+  padding-top: 0;
+  transform: unset !important;
+  left: -619px !important;
+}
+.flight-list-box .dropdown .btn-primary {
+  background: transparent;
+  border: unset;
+  font-size: 13px;
+  color: #496cfe;
+  font-family: 'Roboto';
+  padding: 0;
+}
+.flight-list-box .flight-detils span ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.flight-list-box .show > .btn-primary.dropdown-toggle {
+  color: #496cfe;
+  background: transparent;
+  border-color: transparent;
+  padding: 0;
+}
+.round-bk .flight-detils {
+  margin-top: 15px;
+}
+.round-bk {
+  border-left: 1px dashed;
+  text-align: center;
+  padding: 8px 15px 18px 15px;
+  margin: 0;
+}
+.round-flt {
+  padding-top: 25px;
+  border-top: 1px dashed;
+  margin-top: 25px;
+}
+.book-result {
+  background: #f1f1f169;
+  padding: 60px 0;
+}
+
+.book-now a {
+  background: linear-gradient(45deg, var(--black), var(--background));
+  color: #fff;
+  padding: 11px 30px 9px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+.flight-list-box .bottom-content {
+  padding-top: 15px;
+  /*border-top: 1px solid var(--background);*/
+  margin-top: 10px;
+}
+.flight-list-box .bottom-content p {
+  font-size: 16px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+
+.flight-list-box .bottom-content p span {
+  font-size: 13px;
+  color: #666363;
+}
+.flight-timeline {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  list-style: none;
+}
+.flight-list-box .bottom-content .rlt-mob {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flight-list-box .bottom-content .rlt-mob2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 83.5%;
+}
+.flight-list-box .bottom-content .rlt-mob .extra-things label {
+  margin: 0;
+}
+.flight-list-box .bottom-content .rlt-mob2 .dt-mt {
+  text-align: center;
+}
+.flight-list-box .bottom-content .rlt-mob2 .name-flt {
+  line-height: 50px !important;
+  text-align: left;
+}
+
+.flight-list-box .bottom-content .rlt-mob2 .rt-lc {
+  width: 71%;
+}
+.segmentDeparture-overlay .css-1894l3t span {
+  color: #fff !important;
+}
+.segmentDeparture-overlay .css-1894l3t {
+  background: linear-gradient(45deg, var(--black), var(--background));
+  padding: 10px 15px;
+  text-align: left;
+  margin-top: 20px;
+  color: #fff;
+}
+.flight-detils span {
+  font-family: 'Josefin Sans';
+}
+.flight-detils .d-block {
+  font-size: 15px;
+}
+.flight-timeline li {
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  color: #000;
+}
+.flight-timeline li {
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  color: #000;
+}
+
+.trip .d-block {
+  font-size: 12px !important;
+  color: #666363 !important;
+  text-align: center;
+}
+.trip-price .trip {
+  text-align: center;
+}
+.flight-detils.drop a {
+  font-size: 15px;
+}
+.flight-detils.time {
+  position: relative;
+  top: 10px;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  background: #f1f1f1;
+  padding: 4px 15px;
+}
+
+.flight-timeline p .tm-dt {
+  font-size: 14px !important;
+  font-weight: 600;
+  font-family: 'Roboto';
+  line-height: 22px;
+}
+span.tm-dt label {
+  font-weight: normal;
+  font-size: 13px;
+  font-family: 'Roboto';
+  margin: 0;
+}
+.flight-timeline span.name-flt {
+  font-size: 15px !important;
+  color: #000 !important;
+  font-family: 'Josefin Sans';
+}
+.flight-list-box .bottom-content .rlt-mob2 .dot {
+  margin: 0 15px;
+}
+.date-time span.date-flt {
+  margin-left: 7px;
+}
+.one-wy {
+  margin-bottom: 30px;
+}
+.round-wy {
+  margin-bottom: 30px;
+}
+.tab-short-high {
+  margin-bottom: 30px;
+}
+
+.tab-short-high button {
+  margin: 0 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  content: ' ';
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
+.flight-detils.drp button {
+  background: transparent;
+  border: unset;
+  font-size: 14px !important;
+  color: var(--background) !important;
+  font-family: 'Josefin Sans' !important;
+  padding: 0;
+  margin-right: 55px;
+}
+.flight-detils.drp.one-rd button {
+  margin-right: 14px;
+  font-weight: 600;
+  position: relative;
+  top: -10px;
+  border: 1px solid var(--background);
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+.flight-detils.drp.one-rd .bottom-content:nth-child(1) {
+  margin-top: 55px;
+}
+
+.flight-detils.drp {
+  text-align: right;
+  margin-top: -40px;
+}
+
+/*----------------------------FROM START---------------------*/
+
+.tab-short-high .tab {
+  overflow: hidden;
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-short-high .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 30px;
+  transition: 0.3s;
+  font-size: 17px;
+  background: #fff;
+  color: var(--background);
+  box-shadow: 0 0 3px #ccc;
+  font-weight: 600;
+  border-bottom: 2px solid var(--background);
+  font-family: 'Josefin Sans';
+}
+.tab-short-high .tab button:hover {
+  background-color: #ddd;
+}
+.tab-short-high .tab button.active {
+  color: var(--white);
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--black), var(--background));
+  border-bottom: 2px solid var(--background);
+}
+.tab-short-high .tabcontent {
+  display: none;
+}
+
+.flt input {
+  width: 100%;
+  padding: 10px 10px 10px 30px;
+  font-size: 16px;
+  border: 1px solid #808080a6;
+  border-radius: 5px;
+  font-family: 'Josefin Sans';
+}
+.flt {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+.flt .row {
+  padding: 15px 15px 0px 0;
+  border-radius: 5px;
+}
+.frm {
+  position: relative;
+  margin-right: 10px;
+}
+.frm.fm,
+.frm.to {
+  width: 21%;
+}
+.flt-htl-passenger {
+  width: 22%;
+}
+.frm i {
+  position: absolute;
+  bottom: 18px;
+  left: 8px;
+  color: var(--background);
+}
+.returndate {
+  display: none;
+}
+.srch {
+  text-align: center;
+  width: 11%;
+}
+.srch button {
+  border: unset;
+  background: linear-gradient(45deg, var(--black), var(--background));
+  font-size: 19px;
+  margin-top: 30px;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+:focus-visible {
+  outline: unset;
+}
+.result-form img {
+  width: 100%;
+}
+.flt-htl .tab {
+  display: none;
+}
+.one-round input {
+  width: 20px;
+}
+.one-round {
+  display: flex;
+  align-items: center;
+}
+.one-round label {
+  margin: 0;
+  font-family: 'Josefin Sans';
+}
+.result-form {
+  margin: 85px 0 0px 0;
+  padding: 60px 0 60px 0;
+}
+.result-form:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/resl-fm.jpg);
+  background-size: 100%, 100%;
+  opacity: 0.2;
+}
+.pr-flt-logo .pricing h5 {
+  margin: 0;
+}
+.footer {
+  background: linear-gradient(45deg, var(--black), var(--background));
+  padding: 35px 0;
+}
+.footer p {
+  color: #fff;
+  margin: 0;
+}
+.footer a {
+  color: var(--white);
+}
+.reslt-ft {
+  text-align: right;
+}
+.reslt-ft i {
+  color: var(--white);
+  padding: 0 5px;
+  font-size: 21px;
+}
+.frm label {
+  font-family: 'Josefin Sans';
+}
+
+.frm input::placeholder {
+  font-family: 'Josefin Sans';
+  color: var(--black);
+}
+
+/*----------------------------FROM END---------------------*/
+
+/*----------------------------SEARCH-START---------------------*/
+.logo {
+  text-align: center;
+}
+.search {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+section.all-search .bck {
+  height: 100vh;
+  width: 100%;
+}
+.all-search .srch1 {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 5px;
+}
+.month-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+.month-date p {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--background);
+  margin: 0;
+}
+.month-date p:last-child {
+  text-align: right;
+}
+.month-date p span i {
+  font-size: 12px;
+}
+.all-search {
+  /*background: var(--background);*/
+  background: url(../img/search-bk.jpg);
+}
+.month-date p label {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--background);
+  margin: 0;
+}
+.month-date p span {
+  color: var(--black);
+  font-size: 15px;
+}
+.cnt-numbr {
+  text-align: center;
+  margin-top: 15px;
+}
+.cnt-numbr .wait {
+  width: 100px;
+  margin-top: 10px;
+}
+.cnt-numbr p {
+  color: var(--background);
+  font-weight: 600;
+}
+.btn--search {
+  background: var(--background);
+  padding: 6px 16px;
+  color: var(--white);
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+  animation: pulse 2s infinite;
+}
+.btn--search img {
+  width: 30px;
+  position: relative;
+  top: -3px;
+}
+.search__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----------------------------SEARCH-END---------------------*/
+
+/*----------------------------NO-RESULT-FOUND-START---------------------*/
+.cnt-numbr.no-result {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.no-result-found {
+  background: #f1f1f1;
+}
+.result {
+  width: 700px;
+  background: var(--white);
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.result p {
+  font-size: 30px;
+  font-weight: bold;
+  background: var(--back-grund);
+  margin: 15px 15px 80px 15px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.cnt-numbr.no-result2 {
+  display: flex;
+  align-items: center;
+}
+.result2 {
+  width: 100%;
+  background: var(--white);
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.result2 p {
+  font-size: 30px;
+  font-weight: bold;
+  background: var(--back-grund);
+  margin: 15px 15px 80px 15px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.blink {
+  animation: blinker 2s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+/*----------------------------NO-RESULT-FOUND-END---------------------*/
+
+/*----------------------------BOOKING-START---------------------*/
+.main-booking {
+  margin: 160px 0 60px 0;
+}
+.main-booking .upper-top-content {
+  padding-top: 25px;
+  padding-right: 30px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  background: linear-gradient(45deg, var(--black), var(--background));
+}
+.main-booking .upper-top-content .left span {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 0px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Josefin Sans';
+}
+.main-booking .upper-top-content .left p {
+  font-size: 14px;
+  color: #d0d9ff;
+  margin: 0;
+}
+.main-booking .rt-widget {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  padding: 30px;
+  border: 1px solid rgba(42, 56, 76, 0.15);
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(55, 94, 246, 0.2);
+  box-shadow: 0 10px 30px 0 rgba(55, 94, 246, 0.2);
+}
+.main-booking .rt-widget ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-booking .rt-widget.final-booking li {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+.main-booking .rt-widget ul li {
+  font-size: 14px;
+  display: block;
+  padding-bottom: 5px;
+}
+.main-booking .rt-widget.final-booking li {
+  font-size: 16px;
+  color: #000;
+}
+.main-booking .rt-widget.final-booking li.sub-total {
+  margin-top: 7px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.502);
+}
+.main-booking .rt-widget.final-booking li.sub-total span:nth-child(1) {
+  font-size: 18px;
+  font-weight: 600;
+}
+.main-booking .rt-widget.final-booking li.sub-total span:nth-child(2) {
+  font-size: 28px;
+  font-weight: 600;
+  color: #496cfe;
+}
+.main-booking .float-right {
+  float: right !important;
+}
+.main-booking .small,
+small {
+  font-size: 80%;
+  font-weight: 400;
+}
+.main-booking .rt-btn.rt-sm {
+  font-size: 14px;
+  padding: 14px 25px;
+}
+.main-booking .rt-strong {
+  font-weight: 700;
+}
+.main-booking .rt-footer-social ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-booking .rt-footer-social ul li {
+  display: inline-block;
+  margin-right: 8px;
+}
+.main-booking .rt-alrt-1 {
+  position: relative;
+  z-index: 1;
+  color: #555;
+  -webkit-box-shadow: 0 4px 20px 0 rgba(46, 70, 198, 0.2);
+  box-shadow: 0 4px 20px 0 rgba(46, 70, 198, 0.2);
+}
+.main-booking .alert {
+  padding: 30px;
+  border: medium none;
+  border-radius: 0;
+}
+.main-booking .media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-family: 'Josefin Sans';
+}
+.main-booking .media h6 {
+  margin: 0;
+}
+.main-booking .rt-alrt-1 i {
+  font-size: 25px;
+  color: #000;
+}
+.main-booking .media-body {
+  -ms-flex: 1;
+  flex: 1;
+}
+.main-booking .rt-alrt-1:after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  opacity: 0.2;
+  background-image: -webkit-linear-gradient(
+    82deg,
+    #496cfe 0%,
+    #4950f8 29%,
+    #4933f1 55%,
+    #7133f3 83%,
+    #9932f5 100%
+  );
+  /* background-image: linear-gradient(8deg, #496cfe 0%, #4950f8 29%, #4933f1 55%, #7133f3 83%, #9932f5 100%); */
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+  filter: alpha(opacity=20);
+}
+
+.main-booking .flight-list-box.pt-30 {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.main-booking .flight-list-box {
+  position: relative;
+  z-index: 1;
+  padding: 20px 15px 15px 15px;
+  -webkit-transition: all 0.24s ease-in-out;
+  transition: all 0.24s ease-in-out;
+  border: 1px solid rgba(13, 21, 75, 0.15);
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 7px 0 rgba(55, 94, 246, 0.2);
+  box-shadow: 0 3px 7px 0 rgba(55, 94, 246, 0.2);
+}
+.main-booking .flight-timeline:before {
+  left: 18%;
+}
+.main-booking .f-size-24 {
+  font-size: 24px;
+  font-family: 'Josefin Sans';
+}
+.main-booking .rt-medium {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.main-booking .flight-lable.rt-form label {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #252a32;
+  font-family: 'Josefin Sans';
+  margin-bottom: 5px;
+}
+.main-booking .rt-form.rt-line-form [type='color'],
+.rt-form.rt-line-form [type='date'],
+.rt-form.rt-line-form [type='datetime'],
+.rt-form.rt-line-form [type='datetime-local'],
+.rt-form.rt-line-form [type='email'],
+.rt-form.rt-line-form [type='month'],
+.rt-form.rt-line-form [type='number'],
+.rt-form.rt-line-form [type='password'],
+.rt-form.rt-line-form [type='search'],
+.rt-form.rt-line-form [type='tel'],
+.rt-form.rt-line-form [type='text'],
+.rt-form.rt-line-form [type='time'],
+.rt-form.rt-line-form [type='url'],
+.rt-form.rt-line-form [type='week'],
+.rt-form.rt-line-form input:not([type]),
+.rt-form.rt-line-form textarea,
+.rt-form.rt-line-form .form-control {
+  border: none;
+  border-bottom: 1px solid rgba(90, 90, 90, 0.5);
+}
+.main-booking .rt-form.rt-line-form select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(90, 90, 90, 0.5);
+}
+.main-booking .rt-form select {
+  width: 100%;
+  height: 51px;
+  color: #727799;
+  border: 1px solid rgba(90, 90, 90, 0.5);
+  background-color: transparent;
+}
+.main-booking .frst-nm {
+  margin-bottom: 20px;
+}
+.main-booking .cont-detls {
+  margin: 30px 0;
+}
+.main-booking .cont-detls input,
+.bling-detal input {
+  width: 100%;
+}
+.main-booking .flight-detils.drp.one-rd .flip {
+  background: linear-gradient(45deg, var(--black), var(--background));
+  padding: 6px 15px;
+  color: var(--white) !important;
+  border-radius: 5px;
+}
+.main-booking .flight-detils.drp {
+  margin-top: 0px;
+}
+.main-booking .flight-detils.drp.one-rd button {
+  top: 0;
+  margin-right: 0;
+}
+.main-booking .cont-detls input::placeholder {
+  font-size: 13px;
+  font-family: 'Josefin Sans';
+}
+.main-booking .cont-detls ul {
+  padding-left: 0;
+  font-size: 13px;
+  list-style-type: none;
+  font-family: 'Josefin Sans';
+}
+.main-booking .pasengr-dtls input::placeholder {
+  font-size: 13px;
+  font-family: 'Josefin Sans';
+}
+.main-booking .pasengr-dtls ul {
+  padding-left: 0;
+  font-size: 13px;
+  list-style-type: none;
+  font-family: 'Josefin Sans';
+}
+.main-booking .bling-detal input::placeholder {
+  font-size: 13px;
+  font-family: 'Josefin Sans';
+}
+.main-booking .bling-detal ul {
+  padding-left: 0;
+  font-size: 13px;
+  list-style-type: none;
+  font-family: 'Josefin Sans';
+}
+.main-booking .form-control {
+  border-radius: unset;
+  padding-left: 2px;
+}
+.main-booking .biling-adrs.blns {
+  margin-top: 50px;
+}
+.main-booking .biling-adrs h6 {
+  margin-bottom: 25px;
+}
+.main-booking .biling-adrs {
+  margin-top: 20px;
+}
+.main-booking select {
+  font-size: 13px;
+  margin-top: 1px;
+  font-family: 'Josefin Sans';
+}
+.main-booking .travellersdropdown.selct-bl,
+.main-booking .countriesdropdown.contrybox.countrychnge.selct-bl {
+  margin-top: 0;
+}
+.main-booking .countriesdropdown.contrybox.contrybox1 {
+  margin-top: 8px;
+}
+.main-booking #select-2 {
+  margin-top: 0;
+}
+.main-booking .bok button {
+  border: unset;
+  background: linear-gradient(45deg, var(--black), var(--background));
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+.main-booking .bok-al {
+  display: flex;
+}
+.main-booking .frst-nm input {
+  padding: 1.5px 0;
+  height: auto;
+}
+.main-booking .frst-nm.hld {
+  margin: 0 !important;
+}
+.main-booking .frst-nm.hld {
+  margin: 0 !important;
+}
+.selct-bl {
+  height: 27px !important;
+}
+.bling-detal .flight-lable {
+  margin-top: 15px;
+}
+.bling-detal .text-capitalize {
+  margin-bottom: 15px;
+}
+.biling-adrs h6 {
+  margin: 0;
+  font-size: 18px;
+  background: var(--background);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.bok {
+  text-align: center;
+  margin-top: 25px;
+}
+.bok a {
+  background: linear-gradient(
+    8deg,
+    #9932f5 0%,
+    #4933f1 53%,
+    #4950f8 70%,
+    #496cfe 100%
+  );
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+.final-booking p {
+  font-size: 14px;
+  color: gray;
+  font-weight: 500;
+}
+.final-booking h4 {
+  font-size: 20px !important;
+}
+
+.returndate input {
+  background: #fff;
+}
+.flight-logo img {
+  width: 50px;
+}
+.flighttype {
+  text-align: center;
+  font-size: 14px;
+  color: #666363;
+  font-family: 'Josefin Sans';
+}
+.flight-time {
+  width: 60%;
+}
+
+.light-theme.simple-pagination ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+}
+.light-theme.simple-pagination .page-link {
+  padding: 0;
+  border: unset;
+}
+.light-theme.simple-pagination ul li {
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+.flight-detils.drp.one-rd button:after {
+  content: '\f0dd';
+  font-family: 'Font Awesome 5 Free';
+  margin-left: 3px;
+}
+
+.price-stop .ui-state-default,
+.price-stop .ui-widget-content .ui-state-default,
+.price-stop .ui-widget-header .ui-state-default,
+.price-stop .ui-button,
+html .price-stop .ui-button.ui-state-disabled:hover,
+html .price-stop .ui-button.ui-state-disabled:active {
+  background: #fff !important;
+  border: 4px solid var(--background) !important;
+  border-radius: 50px;
+  top: -6.7px !important;
+}
+.price-stop .ui-widget-header {
+  background: linear-gradient(
+    45deg,
+    var(--black),
+    var(--background)
+  ) !important;
+}
+.price-stop .ui-state-hover,
+.price-stop .ui-widget-content .price-stop .ui-state-hover,
+.price-stop .ui-widget-header .ui-state-hover,
+.price-stop .ui-state-focus,
+.price-stop .ui-widget-content .ui-state-focus,
+.price-stop .ui-widget-header .ui-state-focus,
+.price-stop .ui-button:hover,
+.price-stop .ui-button:focus {
+  background: #fff !important;
+}
+.price-stop .ui-widget.ui-widget-content {
+  border: unset !important;
+  height: 5px !important;
+}
+.price-stop .ui-widget-content {
+  background: #ddd !important;
+}
+.locn-dpt-arivl {
+  border-bottom: 1px dashed #000;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+}
+.locn-dpt-arivl .depart p,
+.locn-dpt-arivl .arival p {
+  font-family: 'Josefin Sans';
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.rand-dpt-arivl h5 {
+  font-family: 'Josefin Sans';
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.rand-dpt-arivl .text-14.fw-500 {
+  font-size: 15px;
+  font-family: 'Josefin Sans';
+}
+
+.rand-dpt-arivl .timerange {
+  font-size: 15px;
+  font-family: 'Josefin Sans';
+  margin-bottom: 12px;
+}
+.rand-dpt-arivl .timerange3 {
+  font-size: 15px;
+  font-family: 'Josefin Sans';
+  margin-bottom: 12px;
+}
+.rand-dpt-arivl .rand-arl {
+  margin-top: 20px;
+}
+.rand-dpt-arivl {
+  border-bottom: 1px dashed #000;
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+
+.rand-dpt-arivl .sliders_step1,
+.sliders_step3 {
+  padding: 0 8px;
+}
+.prce .sliders_step-amnt {
+  padding: 0 8px;
+}
+.prce h5 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-family: 'Josefin Sans';
+}
+.prce .timerange-amnt {
+  margin-bottom: 12px;
+  font-family: 'Josefin Sans';
+}
+.prce {
+  border-bottom: 1px dashed #000;
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+.arln-chk h3 {
+  margin-bottom: 10px;
+}
+.onewaycls .row {
+  align-items: center;
+}
+.onewaycls .round-bk.double-rund {
+  padding: 10px 0px 50px 0;
+}
+.onewaycls .flight-detils.drp.one-rd {
+  margin-top: -26px;
+}
+.onewaycls .one {
+  padding-top: 12px;
+}
+.arvl {
+  margin-top: 20px;
+}
+.arvl .sliders_step2 {
+  padding: 0 8px;
+}
+.flight-list-box.dropdown.one-wy.round-trip.onewaycls {
+  padding: 25px 15px 15px;
+}
+.onewaycls .flight-detils .mainfltdetail {
+  margin-top: -22px;
+}
+.onewaycls .flight-detils.drp.one-rd .bottom-content:nth-child(1) {
+  margin-top: 10px;
+}
+.flt-inpt {
+  display: flex;
+  align-items: center;
+}
+.srch i {
+  font-size: 15px;
+}
+.frm.fm.departclass {
+  width: 12%;
+}
+.frm.to.returnclass {
+  width: 12%;
+}
+.frm.fm.departclass.departdate {
+  width: 25%;
+}
+.flt input#return {
+  position: relative;
+  top: -2px;
+}
+.flt input#oneway {
+  position: relative;
+  top: -2px;
+}
+.flt-htl-passenger .pass_bx input {
+  padding: 0;
+}
+.flt-htl-passenger .psg_dls {
+  position: absolute;
+  background: #f1f1f1;
+  width: 100% !important;
+  z-index: 9;
+  padding: 15px;
+}
+.flt-htl-passenger .pass_bx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.flt-htl-passenger .pass_bx .input-group {
+  width: 48%;
+}
+.flt-htl-passenger .pass_bx .input-group .left,
+.flt-htl-passenger .pass_bx .input-group .right {
+  background: linear-gradient(45deg, var(--black), var(--background));
+}
+.flt-htl-passenger .pass_bx .input-group .left span,
+.flt-htl-passenger .pass_bx .input-group .right span {
+  font-size: 12px;
+}
+.flt-htl-passenger .psg_dls .eco {
+  margin: 0;
+  line-height: 38px;
+}
+.flt-htl-passenger .pass_bx span {
+  color: white;
+  text-align: center;
+}
+.btn_dn button {
+  background: #5428d5;
+  border: unset;
+  color: #fff;
+  padding: 6px 20px;
+}
+.ajaxloader.plane-loader-cont {
+  width: 64% !important;
+  margin: 0 auto;
+}
+.noresultfound {
+  display: none;
+}
+.flt .one-round label {
+  margin-right: 15px;
+}
+.main-headresult .to-mal {
+  font-weight: 600;
+}
+.main-headresult .to-mal a {
+  color: var(--background);
+}
+.cont-detls .parsley-required {
+  color: red;
+}
+.pasengr-dtls .parsley-custom-error-message {
+  color: red;
+}
+.ofimg-bk {
+  margin-top: 30px;
+}
+.ofimg-bk img {
+  width: 100%;
+}
+.modal {
+  opacity: 1 !important;
+}
+.modal.fade {
+  background: #000000a3;
+}
+.modal.fade .modal-dialog {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  max-width: 800px;
+}
+.modal.fade .modal-content .modal-body {
+  padding: 30px;
+}
+.modal.fade .modal-content .modal-body h2 {
+  font-size: 32px;
+  color: var(--background);
+  line-height: 40px;
+}
+.modal.fade .modal-content .modal-body h3 {
+  font-size: 18px;
+  color: #000;
+  margin: 15px 0px;
+  line-height: 26px;
+}
+.modal.fade .modal-content .modal-body .img-box-cus p {
+}
+.btn-cont-box {
+  text-align: center;
+  margin-top: 30px;
+}
+.btn-cont-box a {
+  background: linear-gradient(45deg, var(--black), var(--background));
+  color: var(--white);
+  padding: 12px 20px 15px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+.all-alter {
+  display: flex;
+  align-items: center;
+}
+.btn-cont-box img {
+  width: 25px;
+}
+.alter-cnt {
+  margin-left: 30px;
+}
+.img-box-cus img {
+  width: 100%;
+}
+.img-box-cus {
+  position: relative;
+}
+.all-noresult {
+  background: #ffffff69;
+}
+.all-noresult .no-result2 {
+  height: 100vh;
+  width: 1170px;
+  margin: 0 auto;
+}
+.all-noresult .result2 {
+  background: #fff;
+  box-shadow: 0 0 20px #ccc;
+}
+.result2 a {
+  color: var(--white);
+}
+.main-booking .flight-detils.drp.one-rd button {
+  border: unset;
+}
+.rest-logo {
+  width: 220px;
+}
+.hm-no-resl {
+  width: 1400px;
+  margin: 0px auto;
+}
+.hm-no-resl .cnt-numbr.no-result2 {
+  height: 92vh;
+  width: 100%;
+}
+.hm-no-resl .result2 {
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+}
+.parsley-required {
+  color: red;
+}
+.parsley-length {
+  color: red;
+}
+.loader {
+  width: 92.5%;
+  margin: 0 auto;
+}
+.loader img {
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
